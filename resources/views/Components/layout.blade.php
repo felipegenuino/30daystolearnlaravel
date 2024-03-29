@@ -1,10 +1,12 @@
+@props(['title'])
+
 <!DOCTYPE html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}" class="h-full bg-gray-100">
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <title>about</title>
+        <title> Exemple.com | {{$title ?? ""}} </title>
 
         <!-- Fonts -->
         <link rel="preconnect" href="https://fonts.bunny.net">
@@ -26,9 +28,9 @@
                 <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
                 <x-nav-link href="/"          :active="request()->is('/')" >Home</x-nav-link>
                 <x-nav-link href="/about"   :active="request()->is('about')">About</x-nav-link>
-                <x-nav-link href="/contact"   :active="request()->is('contact')">Contact</x-nav-link>
-                <x-nav-link href="/contact" type="button" :active="request()->is('contact')">button</x-nav-link>
-              </div>
+                <x-nav-link href="/jobs"   :active="request()->is('jobs')">Jobs</x-nav-link>
+                <x-nav-link href="/contact"  type="a" :active="request()->is('contact')">Contact</x-nav-link>
+               </div>
             </div>
           </div>
           <div class="hidden md:block">
